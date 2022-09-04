@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Axios</title>
+  </head>
+
+  <body>
+    <div class="page">
+      <h1 class="header">Pokedéx</h1>
+      <h4 style="font-family: Times New Roman">Get Your Pokémon</h4>
+      <div class="search">
+        <div class="search-half1">
+          <a>Please choose an ID:</a> <br />
+          <div class="mx-5 rounded mt-2">
+            <input type="number" min="1" value="1" class="pokemon-input" />
+            <input
+              type="button"
+              name="answer"
+              value="Find your pokémon"
+              onclick="showDiv()"
+              class="pokemon-button"
+            />
+            <!-- <button class="pokemon-button">Load Pokemon Data</button> -->
+          </div>
+        </div>
+        <div class="search-half2">
+          <div class="borderSearch">
+            <a class="font-size">
+              for a Pokémon by name or using its National Pokédex number.</a
+            >
+          </div>
+        </div>
+      </div>
+      <div id="pokemonName" style="display: none" class="pokemonDetail">
+        <div class="pokemon-detail">
+          <div>
+            <a onclick="showDiv()">Your Pokémon is: </a
+            ><span class="pokemon-name"></span> <br />
+
+            <img class="pokemon-image" /> <br />
+
+            <div class="pokemonType">
+              <a onclick="showDiv()">Type: </a
+              ><span class="pokemon-type"></span> <br />
+            </div>
+
+            <div class="pokemonAbility">
+              <a onclick="showDiv()">Ability: </a
+              ><span class="pokemon-ability"></span> <br />
+            </div>
+
+            <div class="pokemonMove">
+              <a onclick="showDiv()">Move: </a
+              ><span class="pokemon-move"></span>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
